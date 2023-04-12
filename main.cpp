@@ -8,18 +8,17 @@
 #include"Custom/sphere.h"
 #include"Custom/camera.h"
 
-color ray_color(const ray &r, const hittable_list &world,int depth)
+color ray_color(const ray &r, const hittable_list &world, int depth)
 {
-    if(depth<=0)
-        return color(0,0,0);
+    if (depth <= 0)
+        return color(0, 0, 0);
     hit_record rec;
-    for (auto &obj: world.objects)
-        if (obj->hit(r, 0, infinity, rec))
-        {
-            auto target = rec.p + rec.normal + random_unit_sphere();
-            return 0.5 * ray_color(ray(rec.p, target - rec.p), world,depth-1);
-        }
-    vec3 unit_direction = unit_vector(r.direction());//y is between -1~1
+    if (world.hit(r, 0, infinity, rec))
+    {
+        auto target = rec.p + rec.normal + random_unit_sphere();
+        return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
+    }
+    vec3 unit_direction = unit_vector(r.direction());//y  is between -1~1
     auto t = 0.5 * unit_direction.y() + 0.5;
     return color(1, 1, 1) * (1 - t) + color(0.5, 0.7, 1.0) * t;
 
@@ -28,7 +27,7 @@ color ray_color(const ray &r, const hittable_list &world,int depth)
 int main()
 {
     std::fstream image("E:/RayTracing/image.ppm");
-    const int maxDepth=50;
+    const int maxDepth = 50;
 
     // Image
     const auto aspect_ratio = 16.0 / 9.0;
@@ -59,7 +58,7 @@ int main()
                 auto u = (i + random_double()) / (image_width - 1);
                 auto v = (j + random_double()) / (image_height - 1);
                 ray r = cam.get_ray(u, v);
-                pixelColor += ray_color(r, world,maxDepth);
+                pixelColor += ray_color(r, world, maxDepth);
             }
             write_color(image, pixelColor, samples_per_pixel);
         }
