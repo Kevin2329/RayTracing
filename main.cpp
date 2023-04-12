@@ -14,7 +14,8 @@ color ray_color(const ray &r, const hittable_list &world)
     for (auto &obj: world.objects)
         if (obj->hit(r, 0, infinity, rec))
         {
-            return 0.5 * (rec.normal + color(1, 1, 1));
+            auto target = rec.p + rec.normal + random_unit_sphere();
+            return 0.5 * ray_color(ray(rec.p, target - rec.p), world);
         }
     vec3 unit_direction = unit_vector(r.direction());//y is between -1~1
     auto t = 0.5 * unit_direction.y() + 0.5;
@@ -57,7 +58,7 @@ int main()
                 ray r = cam.get_ray(u, v);
                 pixelColor += ray_color(r, world);
             }
-            write_color(image,pixelColor,samples_per_pixel);
+            write_color(image, pixelColor, samples_per_pixel);
         }
     }
     std::cerr << "\nDone.\n";
