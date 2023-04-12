@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RayTracing"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/kevin/Desktop/RayTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing">
+				<Option output="/Users/kevin/Desktop/RayTracing/cmake-build-debug/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kevin/Desktop/RayTracing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayTracing/fast">
+				<Option output="/Users/kevin/Desktop/RayTracing/cmake-build-debug/RayTracing" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kevin/Desktop/RayTracing/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/kevin/Desktop/RayTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/kevin/Desktop/RayTracing/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/kevin/Desktop/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/camera.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/color.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/hittable.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/hittable_list.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/ray.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/rtweekend.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/sphere.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/Custom/vec3.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/main.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="/Users/kevin/Desktop/RayTracing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
