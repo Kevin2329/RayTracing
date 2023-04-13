@@ -32,7 +32,7 @@ inline double degrees_to_radians(double degrees)
 /// Returns a random real in [0,1)
 inline double random_double()
 {
-    return rand() / (RAND_MAX + 1);
+    return double(rand()) / (RAND_MAX + 1);
 }
 
 /// Returns a random real in [min,max]

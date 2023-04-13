@@ -15,7 +15,7 @@ color ray_color(const ray &r, const hittable_list &world, int depth)
     hit_record rec;
     if (world.hit(r, 0, infinity, rec))
     {
-        auto target = rec.p + rec.normal + random_unit_sphere();
+        point3 target = rec.p + rec.normal + random_unit_sphere();
         return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
     }
     vec3 unit_direction = unit_vector(r.direction());//y  is between -1~1
@@ -26,7 +26,7 @@ color ray_color(const ray &r, const hittable_list &world, int depth)
 
 int main()
 {
-    std::fstream image("E:/RayTracing/image.ppm");
+    std::fstream image("E:/RayTracing/image.ppm", std::ios::out | std::ios::trunc);
     const int maxDepth = 50;
 
     // Image
@@ -37,8 +37,9 @@ int main()
 
     //world
     hittable_list world;
-    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
     world.add(make_shared<sphere>(point3(0, -100.5, -1), 100));
+    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
+
 
     //camera
     camera cam;
