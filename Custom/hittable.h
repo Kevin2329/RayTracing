@@ -6,13 +6,14 @@
 #define RAYTRACING_HITTABLE_H
 
 #include "ray.h"
-
+#include"material.h"
 struct hit_record
 {
     point3 p;
     vec3 normal;
     double t;
     bool front_face;
+    shared_ptr<material> mat_ptr;
 
     inline void set_face_normal(const ray &r, const vec3 &outward_normal)
     {

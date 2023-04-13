@@ -50,13 +50,22 @@ inline double clamp(double x, double min, double max)
     return x;
 }
 
-inline static vec3 random_unit_sphere()
+inline vec3 random_unit_sphere()
 {
     auto p = vec3(random_double(-1, 1), random_double(-1, 1), random_double(-1, 1));
-    p= unit_vector(p);
+    p = unit_vector(p);
     return p;
+}
+
+inline vec3 random_unit_hemisphere(const vec3 &normal)
+{
+    vec3 i = random_unit_sphere();
+    if (dot(normal, i) > 0)
+        return i;
+    return -i;
 
 }
+
 
 // Common Headers
 
