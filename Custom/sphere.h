@@ -6,11 +6,12 @@
 #define RAYTRACING_SPHERE_H
 
 #include "hittable.h"
+#include"lambertian.h"
 
 class sphere : public hittable
 {
 public:
-    sphere(const point3 &c, double r, std::shared_ptr<material> &mat_p) : center(c), radius(r), mat_ptr(mat_p)
+    sphere(const point3 &c, double r, shared_ptr<material> mat_p) : center(c), radius(r), mat_ptr(mat_p)
     {}
 
     bool hit(const ray &r, double t_min, double t_max, hit_record &hitRecord) const override;
