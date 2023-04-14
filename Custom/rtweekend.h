@@ -66,6 +66,24 @@ inline vec3 random_unit_hemisphere(const vec3 &normal)
 
 }
 
+vec3 random_in_unit_disk()
+{
+
+    auto p = vec3(random_double(-1, 1), random_double(-1, 1), 0);
+    p = unit_vector(p);
+    return p;
+}
+
+vec3 random_color()
+{
+    return vec3(random_double(), random_double(), random_double());
+}
+
+vec3 random_color(double min, double max)
+{
+    return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
+}
+
 
 // Common Headers
 

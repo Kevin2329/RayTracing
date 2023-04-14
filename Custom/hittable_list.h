@@ -42,14 +42,20 @@ public:
 bool hittable_list::hit(const ray &r, double t_min, double t_max, hit_record &rec) const
 {
     hit_record temp_record;
-    bool hit_anything=false;
-
-    for(auto &object :objects)
+    bool hit_anything = false;
+    double minDistance_squared = std::numeric_limits<double>::max();
+    for (auto &object: objects)
     {
-        if(object->hit(r,t_min,t_max,temp_record))
+        if (object->hit(r, t_min, t_max, temp_record))
         {
-            hit_anything=true;
-            rec=temp_record;
+            hit_anything = true;
+            auto distance_squared = (temp_record.p - r.origin()).length_squared();
+            //the hit point is closest to the ray's origin
+            if (minDistance_squared > distance_squared)
+            {
+                rec = temp_record;
+                minDistance_squared = distance_squared;
+            }
         }
     }
     return hit_anything;
