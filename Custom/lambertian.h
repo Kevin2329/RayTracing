@@ -17,7 +17,7 @@ public:
     bool scatter(const ray &ray_in, const hit_record &rec, color &attenuation, ray &ray_out) const override
     {
         auto ray_out_direction = rec.p + random_unit_hemisphere(rec.normal);
-        ray_out = ray(rec.p, ray_out_direction);
+        ray_out = ray(rec.p, ray_out_direction,ray_in.time());
         attenuation = albedo;
         return true;
     }

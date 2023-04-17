@@ -29,7 +29,7 @@ public:
         else
             direction = refract(unit_direction, rec.normal, refractive_index_ratio);
 
-        ray_out = ray(rec.p, direction);
+        ray_out = ray(rec.p, direction,ray_in.time());
         return true;
     }
 
